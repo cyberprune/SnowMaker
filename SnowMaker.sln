@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{697EEC17-828B-4AD0-B4BD-4F7422D406F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowMaker.Data.MongoDB", "SnowMaker.Providers.MongoDB\SnowMaker.Data.MongoDB.csproj", "{34ABC0BA-38F7-45C0-8616-B9C499F19F00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowMaker.Data.MongoDB", "SnowMaker.Data.MongoDB\SnowMaker.Data.MongoDB.csproj", "{34ABC0BA-38F7-45C0-8616-B9C499F19F00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowMaker.Data.MongoDB.IntegrationTests", "SnowMaker.Data.MongoDB.IntegrationTests\SnowMaker.Data.MongoDB.IntegrationTests.csproj", "{CB0543B5-DFBA-48BC-A533-A784E2F2239A}"
 EndProject
