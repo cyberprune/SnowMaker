@@ -18,3 +18,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("0.0.1.1")]
 
 [assembly: InternalsVisibleTo("SnowMaker.UnitTests")]
+[assembly: InternalsVisibleTo("SnowMaker.Data.AzureBlob")]

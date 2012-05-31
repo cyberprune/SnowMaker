@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{697EEC17-828B-4AD0-B4BD-4F7422D406F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowMaker.Data.MongoDB", "SnowMaker.Providers.MongoDB\SnowMaker.Data.MongoDB.csproj", "{34ABC0BA-38F7-45C0-8616-B9C499F19F00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowMaker.Data.MongoDB.IntegrationTests", "SnowMaker.Data.MongoDB.IntegrationTests\SnowMaker.Data.MongoDB.IntegrationTests.csproj", "{CB0543B5-DFBA-48BC-A533-A784E2F2239A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnowMaker.Data.AzureBlob", "SnowMaker.Data.AzureBlob\SnowMaker.Data.AzureBlob.csproj", "{02A097F0-E1A4-4855-BE50-C15DF4ABF146}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{697EEC17-828B-4AD0-B4BD-4F7422D406F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{697EEC17-828B-4AD0-B4BD-4F7422D406F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{697EEC17-828B-4AD0-B4BD-4F7422D406F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34ABC0BA-38F7-45C0-8616-B9C499F19F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34ABC0BA-38F7-45C0-8616-B9C499F19F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34ABC0BA-38F7-45C0-8616-B9C499F19F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34ABC0BA-38F7-45C0-8616-B9C499F19F00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB0543B5-DFBA-48BC-A533-A784E2F2239A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB0543B5-DFBA-48BC-A533-A784E2F2239A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB0543B5-DFBA-48BC-A533-A784E2F2239A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB0543B5-DFBA-48BC-A533-A784E2F2239A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02A097F0-E1A4-4855-BE50-C15DF4ABF146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02A097F0-E1A4-4855-BE50-C15DF4ABF146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02A097F0-E1A4-4855-BE50-C15DF4ABF146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02A097F0-E1A4-4855-BE50-C15DF4ABF146}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
