@@ -28,7 +28,17 @@ namespace SnowMaker.Data.MongoDB
             this.CollectionName = collectionName;
 
             this.IsConnected = false;
-            
+
+        }
+
+        public MongoOptimisticDataStore(MongoClientSettings settings, string databaseName, string collectionName)
+        {
+            MongoClient client = new MongoClient(settings);
+            this.Server = client.GetServer();
+            this.CollectionName = collectionName;
+            this.Database = this.Server.GetDatabase(databaseName);
+            SetCollection();
+            this.IsConnected = true;
         }
 
         public MongoOptimisticDataStore(MongoServerSettings settings, string databaseName, string collectionName)
@@ -52,11 +62,18 @@ namespace SnowMaker.Data.MongoDB
             Connect();
         }
 
+
+
         public void Connect()
         {
             this.Server = new MongoServer(this.ServerSettings);
             this.Database = this.Server.GetDatabase(this.DatabaseName);
 
+            SetCollection();
+        }
+
+        private void SetCollection()
+        {
             if (!this.Database.CollectionExists(this.CollectionName))
             {
                 this.Database.CreateCollection(this.CollectionName);
@@ -116,20 +133,13 @@ namespace SnowMaker.Data.MongoDB
                 block.Data = data;
             }
 
-            MongoInsertOptions insertOptions = new MongoInsertOptions(this.Collection);
-            insertOptions.SafeMode = new SafeMode(true);
+            WriteConcernResult result = this.Collection.Save<SnowflakeBlock>(block);
 
-            SafeModeResult result = this.Collection.Save<SnowflakeBlock>(block, insertOptions);
-            if (result == null)
-            {
-                return false;
-            }
-
-            return result.Ok;
+            return true;
         }
 
 
 
-        
+
     }
 }

@@ -61,10 +61,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SnowMaker.Data.AzureBlob\SnowMaker.Data.AzureBlob.csproj">
-      <Project>{02A097F0-E1A4-4855-BE50-C15DF4ABF146}</Project>
-      <Name>SnowMaker.Data.AzureBlob</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SnowMaker\SnowMaker.csproj">
       <Project>{0AD4FCE5-6968-4B85-9159-50F63D168907}</Project>
       <Name>SnowMaker</Name>

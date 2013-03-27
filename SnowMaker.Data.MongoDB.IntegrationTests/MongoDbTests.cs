@@ -160,5 +160,26 @@ namespace SnowMaker.Data.MongoDB.IntegrationTests
             Assert.AreEqual("1", ds.GetData(blockName.ToString()));
 
         }
+
+        [Test]
+        public void UniqueIdGeneratorWithMongoDBClientConstructorDataSource()
+        {
+            MongoClientSettings settings = new MongoClientSettings();
+            settings.Server = new MongoServerAddress("localhost", 27017);
+            
+
+            UniqueIdGenerator generator = new UniqueIdGenerator(new MongoOptimisticDataStore(settings, "SnowMaker", "IntegrationTests"));
+            string blockName = Guid.NewGuid().ToString();
+
+            generator.BatchSize = 5;
+
+            Assert.AreEqual(1, generator.NextId(blockName));
+            Assert.AreEqual(2, generator.NextId(blockName));
+            Assert.AreEqual(3, generator.NextId(blockName));
+            Assert.AreEqual(4, generator.NextId(blockName));
+            Assert.AreEqual(5, generator.NextId(blockName));
+            Assert.AreEqual(6, generator.NextId(blockName));
+            Assert.AreEqual(7, generator.NextId(blockName));
+        }
     }
 }
